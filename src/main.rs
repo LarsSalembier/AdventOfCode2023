@@ -1,5 +1,5 @@
-use AdventOfCode::use_cases;
-use AdventOfCode::adapters::file_io as file_io;
+use advent_of_code_2023::use_cases;
+use advent_of_code_2023::adapters::file_io as file_io;
 
 fn main() {
     let args = std::env::args().collect();
