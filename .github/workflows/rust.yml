@@ -29,6 +29,6 @@ jobs:
       - name: Run tests
         run: cargo test --verbose
       - name: Run program for exercise 1, part 1
-        run: cargo run 1 1 --verbose
+        run: cargo run 1 1
       - name: Run program for exercise 1, part 2
-        run: cargo run 1 2 --verbose
+        run: cargo run 1 2
