@@ -3,8 +3,6 @@ use std::fs;
 use std::path::Path;
 
 fn main() {
-    println!("cargo:warning=Executing build script...");
-
     let manifest_dir = env::var("CARGO_MANIFEST_DIR");
     if manifest_dir.is_err() {
         println!("cargo:warning=Could not find manifest directory. Make sure the CARGO_MANIFEST_DIR environment variable is set.");

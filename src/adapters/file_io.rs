@@ -12,7 +12,8 @@ use std::path::Path;
 ///
 /// # Returns
 ///
-/// An `io::Result` containing a vector of strings, each representing a line from the file.
+/// An `io::Result` containing a vector of strings, each representing a line from the file. If an error occurs, the
+/// `io::Result` will contain an `io::Error`.
 pub fn read_lines_as_vec<P>(file_path: P) -> io::Result<Vec<String>>
     where
         P: AsRef<Path>,
@@ -27,7 +28,9 @@ pub fn read_lines_as_vec<P>(file_path: P) -> io::Result<Vec<String>>
 #[cfg(test)]
 mod tests {
     use std::io::Write;
+
     use tempfile::NamedTempFile;
+
     use super::*;
 
     fn create_temp_file_with_content(contents: &[u8]) -> NamedTempFile {
