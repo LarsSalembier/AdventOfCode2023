@@ -100,6 +100,7 @@ fn get_solution(day: &Day, part: &Part, input: &[String]) -> Result<String, Prog
 
     match (day, part) {
         (1, 1) => Ok(use_cases::day_1::solve_part1(input).to_string()),
+        (1, 2) => Ok(use_cases::day_1::solve_part2(input).to_string()),
         _ => Err(ProgramError::NotYetImplemented(format!("Day {} Part {} not implemented", day, part))),
     }
 }
